@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>省钱助手</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+      background: #f5f5f5;
+      min-height: 100vh;
+    }
+    
+    /* 顶部横幅 */
+    .header {
+      background: linear-gradient(135deg, #ff4d4d 0%, #ff6b35 100%);
+      padding: 32px 20px;
+      text-align: center;
+      color: #fff;
+    }
+    
+    .header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    
+    .header p {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+    
+    /* 主内容区 */
+    .main {
+      padding: 16px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    
+    /* 服务网格 */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: -40px;
+    }
+    
+    .card {
+      display: block;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .card:active {
+      transform: scale(0.98);
+    }
+    
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+    
+    .card-icon.waimai { background: linear-gradient(135deg, #ff9500 0%, #ff5e00 100%); }
+    .card-icon.dache { background: linear-gradient(135deg, #00c853 0%, #00a843 100%); }
+    .card-icon.movie { background: linear-gradient(135deg, #7c4dff 0%, #536dfe 100%); }
+    .card-icon.hotel { background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%); }
+    
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+    
+    .card-desc {
+      font-size: 12px;
+      color: #999;
+    }
+    
+    .card-tag {
+      display: inline-block;
+      background: #fff3f0;
+      color: #ff4d4d;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+    
+    /* 底部提示 */
+    .footer {
+      text-align: center;
+      padding: 24px 16px;
+      color: #bbb;
+      font-size: 12px;
+    }
+
+    /* SVG 图标 */
+    .icon {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>省钱助手</h1>
+    <p>外卖打车电影酒店 天天有优惠</p>
+  </div>
+
+  <div class="main">
+    <div class="grid">
+      <!-- 外卖 -->
+      <a href="https://xtc2aytt.jutuike.cn/#/pages/meituan/index?code=XTc2Aytt" class="card">
+        <div class="card-icon waimai">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        <div class="card-title">外卖红包</div>
+        <div class="card-desc">美团 · 饿了么</div>
+        <span class="card-tag">最高立减20元</span>
+      </a>
+
+      <!-- 打车 -->
+      <a href="https://xtc2aytt.jutuike.cn/#/pages/didi/index?code=XTc2Aytt" class="card">
+        <div class="card-icon dache">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        </div>
+        <div class="card-title">打车优惠</div>
+        <div class="card-desc">滴滴出行</div>
+        <span class="card-tag">新人立减10元</span>
+      </a>
+
+      <!-- 电影 -->
+      <a href="https://xtc2aytt.jutuike.cn/#/pages/movie/index?code=XTc2Aytt" class="card">
+        <div class="card-icon movie">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+        </div>
+        <div class="card-title">特惠电影</div>
+        <div class="card-desc">低价票</div>
+        <span class="card-tag">9.9元起</span>
+      </a>
+
+      <!-- 酒店 -->
+      <a href="https://xtc2aytt.jutuike.cn/#/pages/mtjd/mtjd?code=XTc2Aytt" class="card">
+        <div class="card-icon hotel">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+        </div>
+        <div class="card-title">酒店特价</div>
+        <div class="card-desc">美团酒店</div>
+        <span class="card-tag">低至5折</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    点击卡片领取优惠券
+  </div>
+</body>
+</html>
