@@ -139,7 +139,7 @@
       30% { opacity: 1; }
     }
 
-    /* 主推活动 banner */
+    /* 主推活动 按钮 */
     .promo-section {
       margin-bottom: 16px;
     }
@@ -152,52 +152,43 @@
       padding-left: 2px;
     }
 
-    .promo-scroll {
+    .promo-btns {
       display: flex;
-      gap: 12px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 4px;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .promo-scroll::-webkit-scrollbar { display: none; }
-
-    .promo-card {
-      flex-shrink: 0;
-      width: 80%;
-      max-width: 340px;
-      scroll-snap-align: start;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    .promo-btn {
+      display: block;
       background: #fff;
+      border-radius: 12px;
+      padding: 14px 16px;
       text-decoration: none;
-      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+      border: none;
+      text-align: left;
+      font-family: inherit;
+      cursor: pointer;
     }
 
-    .promo-card img {
-      width: 100%;
-      display: block;
+    .promo-btn:active {
+      transform: scale(0.98);
     }
 
-    .promo-card-info {
-      padding: 12px 14px;
-    }
-
-    .promo-card-name {
-      font-size: 14px;
+    .promo-btn-name {
+      font-size: 15px;
       font-weight: 600;
       color: #333;
       margin-bottom: 4px;
     }
 
-    .promo-card-desc {
+    .promo-btn-desc {
       font-size: 12px;
       color: #999;
     }
 
-    .promo-card-tag {
+    .promo-btn-tag {
       display: inline-block;
       background: #fff3f0;
       color: #ff4d4d;
@@ -287,22 +278,16 @@
     <!-- 主推活动 -->
     <div class="promo-section">
       <div class="promo-title">限时活动</div>
-      <div class="promo-scroll">
-        <a href="https://kzurl02.cn/t7vO0v" class="promo-card">
-          <img src="poster-shangou.png" alt="淘宝闪购">
-          <div class="promo-card-info">
-            <div class="promo-card-name">淘宝闪购 · 免单福利</div>
-            <div class="promo-card-desc">新人首单免单 / 15 减 14 红包</div>
-            <span class="promo-card-tag">餐饮佣金 6% 起</span>
-          </div>
+      <div class="promo-btns">
+        <a href="https://kzurl02.cn/t7vO0v" class="promo-btn">
+          <div class="promo-btn-name">淘宝闪购 · 免单福利</div>
+          <div class="promo-btn-desc">新人首单免单 / 15 减 14 红包</div>
+          <span class="promo-btn-tag">餐饮佣金 6% 起</span>
         </a>
-        <a href="https://kzurl09.cn/t7vOnH" class="promo-card">
-          <img src="poster-shequ.png" alt="社群福利">
-          <div class="promo-card-info">
-            <div class="promo-card-name">饿了么 · 社群专享红包</div>
-            <div class="promo-card-desc">9.9 元吃饱喝足</div>
-            <span class="promo-card-tag">限量福利</span>
-          </div>
+        <a href="https://kzurl09.cn/t7vOnH" class="promo-btn">
+          <div class="promo-btn-name">饿了么 · 社群专享红包</div>
+          <div class="promo-btn-desc">9.9 元吃饱喝足</div>
+          <span class="promo-btn-tag">限量福利</span>
         </a>
       </div>
     </div>
