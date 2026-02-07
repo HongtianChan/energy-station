@@ -17,7 +17,6 @@
       min-height: 100vh;
     }
     
-    /* 顶部横幅 */
     .header {
       background: linear-gradient(135deg, #ff4d4d 0%, #ff6b35 100%);
       padding: 28px 20px 60px;
@@ -36,14 +35,13 @@
       opacity: 0.9;
     }
     
-    /* 主内容区 */
     .main {
       padding: 0 16px 16px;
       max-width: 480px;
       margin: 0 auto;
     }
 
-    /* AI 助手区域 */
+    /* AI 助手 */
     .ai-section {
       margin-top: -36px;
       margin-bottom: 16px;
@@ -68,7 +66,6 @@
       font-weight: 600;
       padding: 4px 8px;
       border-radius: 6px;
-      letter-spacing: 0.5px;
     }
 
     .ai-input {
@@ -81,9 +78,7 @@
       font-family: inherit;
     }
 
-    .ai-input::placeholder {
-      color: #bbb;
-    }
+    .ai-input::placeholder { color: #bbb; }
 
     .ai-send {
       flex-shrink: 0;
@@ -99,25 +94,15 @@
       transition: opacity 0.2s;
     }
 
-    .ai-send:active {
-      opacity: 0.8;
-    }
+    .ai-send:active { opacity: 0.8; }
+    .ai-send svg { width: 16px; height: 16px; fill: #fff; }
 
-    .ai-send svg {
-      width: 16px;
-      height: 16px;
-      fill: #fff;
-    }
-
-    /* AI 回复区域 */
     .ai-reply {
       display: none;
       padding: 0 16px 14px;
     }
 
-    .ai-reply.show {
-      display: block;
-    }
+    .ai-reply.show { display: block; }
 
     .ai-reply-bubble {
       background: #f8f8f8;
@@ -140,9 +125,7 @@
       font-weight: 500;
     }
 
-    .ai-reply-bubble a:active {
-      opacity: 0.85;
-    }
+    .ai-reply-bubble a:active { opacity: 0.85; }
 
     .typing-dot {
       display: inline-block;
@@ -156,7 +139,83 @@
       30% { opacity: 1; }
     }
 
+    /* 主推活动 banner */
+    .promo-section {
+      margin-bottom: 16px;
+    }
+
+    .promo-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+      padding-left: 2px;
+    }
+
+    .promo-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 4px;
+    }
+
+    .promo-scroll::-webkit-scrollbar { display: none; }
+
+    .promo-card {
+      flex-shrink: 0;
+      width: 80%;
+      max-width: 340px;
+      scroll-snap-align: start;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      background: #fff;
+      text-decoration: none;
+      display: block;
+    }
+
+    .promo-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .promo-card-info {
+      padding: 12px 14px;
+    }
+
+    .promo-card-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .promo-card-desc {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .promo-card-tag {
+      display: inline-block;
+      background: #fff3f0;
+      color: #ff4d4d;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 6px;
+    }
+
     /* 服务网格 */
+    .section-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+      padding-left: 2px;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -173,9 +232,7 @@
       transition: transform 0.2s;
     }
     
-    .card:active {
-      transform: scale(0.98);
-    }
+    .card:active { transform: scale(0.98); }
     
     .card-icon {
       width: 48px;
@@ -187,34 +244,15 @@
       margin-bottom: 12px;
     }
     
-    .card-icon.waimai { background: linear-gradient(135deg, #ff9500 0%, #ff5e00 100%); }
-    .card-icon.dache { background: linear-gradient(135deg, #00c853 0%, #00a843 100%); }
-    .card-icon.movie { background: linear-gradient(135deg, #7c4dff 0%, #536dfe 100%); }
-    .card-icon.hotel { background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%); }
+    .card-icon.waimai { background: linear-gradient(135deg, #ff9500, #ff5e00); }
+    .card-icon.dache { background: linear-gradient(135deg, #00c853, #00a843); }
+    .card-icon.movie { background: linear-gradient(135deg, #7c4dff, #536dfe); }
+    .card-icon.hotel { background: linear-gradient(135deg, #00bcd4, #0097a7); }
     
-    .card-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 4px;
-    }
+    .card-title { font-size: 16px; font-weight: 600; color: #333; margin-bottom: 4px; }
+    .card-desc { font-size: 12px; color: #999; }
+    .card-tag { display: inline-block; background: #fff3f0; color: #ff4d4d; font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-top: 8px; }
     
-    .card-desc {
-      font-size: 12px;
-      color: #999;
-    }
-    
-    .card-tag {
-      display: inline-block;
-      background: #fff3f0;
-      color: #ff4d4d;
-      font-size: 11px;
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-top: 8px;
-    }
-    
-    /* 底部 */
     .footer {
       text-align: center;
       padding: 24px 16px;
@@ -222,11 +260,7 @@
       font-size: 12px;
     }
 
-    .icon {
-      width: 28px;
-      height: 28px;
-      fill: #fff;
-    }
+    .icon { width: 28px; height: 28px; fill: #fff; }
   </style>
 </head>
 <body>
@@ -250,7 +284,31 @@
       </div>
     </div>
 
-    <!-- 服务网格 -->
+    <!-- 主推活动 -->
+    <div class="promo-section">
+      <div class="promo-title">限时活动</div>
+      <div class="promo-scroll">
+        <a href="https://kzurl02.cn/t7vO0v" class="promo-card">
+          <img src="poster-shangou.png" alt="淘宝闪购">
+          <div class="promo-card-info">
+            <div class="promo-card-name">淘宝闪购 · 免单福利</div>
+            <div class="promo-card-desc">新人首单免单 / 15 减 14 红包</div>
+            <span class="promo-card-tag">餐饮佣金 6% 起</span>
+          </div>
+        </a>
+        <a href="https://kzurl09.cn/t7vOnH" class="promo-card">
+          <img src="poster-shequ.png" alt="社群福利">
+          <div class="promo-card-info">
+            <div class="promo-card-name">饿了么 · 社群专享红包</div>
+            <div class="promo-card-desc">9.9 元吃饱喝足</div>
+            <span class="promo-card-tag">限量福利</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 更多服务 -->
+    <div class="section-title">更多优惠</div>
     <div class="grid">
       <a href="https://xtc2aytt.jutuike.cn/#/pages/meituan/index?code=XTc2Aytt" class="card" data-key="waimai">
         <div class="card-icon waimai">
@@ -295,28 +353,39 @@
   </div>
 
   <script>
-    // 服务配置
     const services = {
+      shangou: {
+        keywords: ['闪购', '淘宝', '免单', '红包', '满减'],
+        url: 'https://kzurl02.cn/t7vO0v',
+        reply: '淘宝闪购有免单福利，新人首单免、老用户 15 减 14，很划算。',
+        btn: '去闪购领红包'
+      },
+      shequ: {
+        keywords: ['9.9', '社群', '吃饱', '便宜', '省钱', '福利'],
+        url: 'https://kzurl09.cn/t7vOnH',
+        reply: '社群专享 9.9 吃饱喝足，限量的，手慢无。',
+        btn: '抢社群福利'
+      },
       waimai: {
         keywords: ['外卖', '吃', '饿', '午饭', '晚饭', '早餐', '夜宵', '奶茶', '咖啡', '火锅', '烧烤', '炸鸡', '汉堡', '披萨', '麻辣烫', '酸辣粉', '快餐', '便当', '饭', '面', '粉', '粥', '肯德基', '麦当劳', '瑞幸', '蜜雪', '喜茶', '点餐', '下单', '美团', '饿了么', '食', '餐'],
-        url: 'https://xtc2aytt.jutuike.cn/#/pages/meituan/index?code=XTc2Aytt',
-        reply: '想吃东西？先领个外卖红包再下单，最高能省 20 块。',
+        url: 'https://kzurl02.cn/t7vO0v',
+        reply: '想吃东西？淘宝闪购有 15 减 14 红包，新人还能免单，比直接点外卖省很多。',
         btn: '领外卖红包'
       },
       dache: {
-        keywords: ['打车', '出行', '出门', '滴滴', '车', '去', '回家', '上班', '机场', '火车站', '高铁', '赶路', '叫车', '网约车', '出租', '代驾'],
+        keywords: ['打车', '出行', '出门', '滴滴', '车', '去', '回家', '上班', '机场', '火车站', '高铁', '叫车', '网约车', '代驾'],
         url: 'https://xtc2aytt.jutuike.cn/#/pages/didi/index?code=XTc2Aytt',
         reply: '出门打车？先领个优惠券，新人最多省 10 块。',
         btn: '领打车券'
       },
       movie: {
-        keywords: ['电影', '影院', '看电影', '影片', '票', '大片', '周末', '约会', '首映', 'imax', '3d'],
+        keywords: ['电影', '影院', '看电影', '票', '大片', '周末', '约会', 'imax'],
         url: 'https://xtc2aytt.jutuike.cn/#/pages/movie/index?code=XTc2Aytt',
         reply: '看电影？这里有特惠票，9.9 起。',
         btn: '买特惠电影票'
       },
       hotel: {
-        keywords: ['酒店', '住', '民宿', '旅游', '旅行', '出差', '开房', '住宿', '宾馆', '度假', '订房'],
+        keywords: ['酒店', '住', '民宿', '旅游', '旅行', '出差', '住宿', '宾馆', '度假', '订房'],
         url: 'https://xtc2aytt.jutuike.cn/#/pages/mtjd/mtjd?code=XTc2Aytt',
         reply: '订酒店？美团酒店特价低至 5 折，先看看有没有你要的。',
         btn: '看酒店特价'
@@ -352,32 +421,17 @@
         const s = services[svc];
         replyContent.innerHTML = s.reply + '<br><a href="' + s.url + '">' + s.btn + '</a>';
       } else {
-        replyContent.innerHTML = '没太听懂，你可以直接点下面的卡片，或者换个说法试试？比如「想吃外卖」「要打车」。';
+        replyContent.innerHTML = '没太听懂，你可以试试「想吃外卖」「要打车」「看电影」，或者直接滑动上面的活动卡片。';
       }
     }
 
     function handleSend() {
       const text = input.value.trim();
       if (!text) return;
-
       showTyping();
-
       const matched = matchService(text);
-
-      // 模拟思考延迟
       setTimeout(() => {
         showReply(matched);
-
-        // 如果匹配到，高亮对应卡片
-        document.querySelectorAll('.card').forEach(c => c.style.transform = '');
-        if (matched) {
-          const card = document.querySelector('.card[data-key="' + matched + '"]');
-          if (card) {
-            card.style.transform = 'scale(1.03)';
-            card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            setTimeout(() => card.style.transform = '', 2000);
-          }
-        }
       }, 600 + Math.random() * 400);
     }
 
